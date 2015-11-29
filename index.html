@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css">
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body ng-app="portfolio">
+  <div ng-controller="MainCtrl">
+    
+  
+  <h1>Robertsonsamuel</h1>
+  <div ui-view>
+    <a ui-sref="about">About</a>
+    <a ui-sref="recentwork">Recent Work</a>
+    <a ui-sref="contact"> Contact</a>
+  </div> <!-- ui view end -->
+</div> <!-- MainCtrl end -->
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://cdn.foundation5.zurb.com/foundation.js"></script>
+</body>
+</html>
