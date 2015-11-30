@@ -1,0 +1,23 @@
+h1,h3.herotext{
+  color:white;
+}
+.heroimage{
+  width: 100%;
+  height: 100vh;
+  background-color: #2274A5;
+  margin: 0 auto;
+}
+.top-bar{
+  background:#2274A5;
+  margin: -3px auto;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button){
+  background: #2274A5;
+    line-height: 2.8125rem;
+    padding: 0 0.9375rem;
+}
+.top-bar-section li:not(.has-form) a:not(.button):hover{
+    background-color: #FFBF00;
+    color:white;
+}

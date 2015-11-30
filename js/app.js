@@ -1,25 +1,25 @@
 'use strict';
 
-var app = angular.module('portfolio',['ui.router']);
+var app = angular.module('myApp',['ui.router', 'mm.foundation']);
 
 
-app.config(function stateController($stateProvider, $urlRouterProvider) {
+app.config(function ($stateProvider, $urlRouterProvider) {
    $urlRouterProvider.otherwise("/"); 
 
    $stateProvider
-   .state({
+   .state('landing',{
     url:'/',
     templateUrl:'partials/landing.html'
    })
-   .state({
+   .state('about',{
     url:'/about',
     templateUrl:'partials/about.html'
    })
-   .state({
+   .state('recentwork',{
     url:'/recentwork',
     templateUrl:'partials/recentwork.html'
    })
-   .state({
+   .state('contact',{
     url:'/contact',
     templateUrl:'partials/contact.html'
    });
@@ -30,3 +30,7 @@ app.config(function stateController($stateProvider, $urlRouterProvider) {
 app.controller('MainCtrl', function(){
 
 })
+
+app.controller('TopBar', function ($scope) {
+
+});
