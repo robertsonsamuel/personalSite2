@@ -1,4 +1,5 @@
-<div ui-view>
+
+<div ui-view class="anim-in-out anim-fade" data-anim-speed="500">
   <div class="heroimage">
     <top-bar>
     <ul class="title-area">
@@ -12,7 +13,7 @@
       <!-- Right Nav Section -->
       <ul class="center">
         <li><a ui-sref="landing">Home</a></li>
-        <li><a ngclick="gotoAnchor">About</a></li>
+        <li><a ngclick="gotoAnchor()">About</a></li>
         <li><a ui-sref="recentwork">Recent Work</a></li>
         <li><a ui-sref="contact">Contact Me</a></li>
         <li><a href="http://robertsonsamuel.github.io/blog/public/">Blog</a></li>

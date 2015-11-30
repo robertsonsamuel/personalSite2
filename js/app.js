@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('myApp',['ui.router', 'mm.foundation','typer']);
+var app = angular.module('myApp',['ui.router', 'mm.foundation','typer','ngAnimate','anim-in-out']);
 
 
 app.config(function ($stateProvider, $urlRouterProvider) {
