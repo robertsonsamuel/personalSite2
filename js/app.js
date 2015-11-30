@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('myApp',['ui.router', 'mm.foundation','typer']);
+var app = angular.module('myApp',['ui.router', 'mm.foundation','typer','ngVidBg']);
 
 
 app.config(function ($stateProvider, $urlRouterProvider) {
@@ -27,9 +27,22 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 });
 
-app.controller('MainCtrl', function(){
-
-})
+app.controller('MainCtrl', function($scope){
+  $scope.resources = [
+            '../videos/bg-video.mp4',
+            '*.ogv',
+            '*.swf',
+            '*.webm'
+            ],
+        
+        $scope.poster = 'http://placehold.it/2000&text=you%20may%20want%20to%20have%20a%20poster';
+        $scope.fullScreen = true;
+        $scope.muted = true;
+        $scope.zIndex = '0';
+        $scope.playInfo = {};
+        $scope.pausePlay = true;
+    
+});
 
 app.controller('TopBar', function ($scope) {
 

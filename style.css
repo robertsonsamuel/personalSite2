@@ -4,7 +4,6 @@
 .heroimage{
   width: 100%;
   height: 100vh;
-  background-color: #2274A5;
   margin: 0 auto;
 }
 .top-bar{
@@ -30,8 +29,7 @@
 
 /*card*/
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
-html, body {
-  background: #FAFAFA; }
+
 
 .card {
   font-family: 'Roboto', sans-serif;
