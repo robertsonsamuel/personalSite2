@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('myApp',['ui.router', 'mm.foundation','typer','ngVidBg']);
+var app = angular.module('myApp',['ui.router', 'mm.foundation','typer']);
 
 
 app.config(function ($stateProvider, $urlRouterProvider) {
@@ -27,23 +27,17 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 });
 
-app.controller('MainCtrl', function($scope){
-  $scope.resources = [
-            '../videos/bg-video.mp4',
-            '*.ogv',
-            '*.swf',
-            '*.webm'
-            ],
-        
-        $scope.poster = 'http://placehold.it/2000&text=you%20may%20want%20to%20have%20a%20poster';
-        $scope.fullScreen = true;
-        $scope.muted = true;
-        $scope.zIndex = '0';
-        $scope.playInfo = {};
-        $scope.pausePlay = true;
-    
+app.controller('MainCtrl', function($scope,$location, $anchorScroll){
+
 });
 
-app.controller('TopBar', function ($scope) {
+app.controller('TopBar', function ($scope, $location, $anchorScroll) {
+  $scope.gotoAnchor = function(anchor) {
+   console.log(anchor);
+      // set the location.hash to the id of
+      // the element you wish to scroll to.
+      $location.hash('aboutLanding');
+    
+};
 
 });

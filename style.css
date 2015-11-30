@@ -1,27 +1,43 @@
 .herotext{
   color:white;
 }
+.center-hero {
+    margin: 0 auto;
+    top: 40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
 .heroimage{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  background: #00d2ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #00d2ff, #3a7bd5);
+  background: -o-linear-gradient(right, #00d2ff, #3a7bd5);
+  background: linear-gradient(to left, #00d2ff, #3a7bd5); /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
   margin: 0 auto;
 }
 .top-bar{
-  background:#2274A5;
+  background: transparent;
   margin: -3px auto;
+}
+.top-bar-section ul li {
+    background: rgba(255, 214, 214, 0);
 }
 
 .top-bar-section li:not(.has-form) a:not(.button){
-  background: #2274A5;
+  background: transparent;
     line-height: 2.8125rem;
     padding: 0 0.9375rem;
 }
 .top-bar-section li:not(.has-form) a:not(.button):hover{
-    background-color: #FFBF00;
+    background-color: #09C4F8;
     color:white;
 }
 .top-bar.expanded .title-area{
-  background: rgb(82, 180, 222)
+  background: transparent;
 }
 .top-bar.expanded .toggle-topbar a{
   color:#FFFFFF;
