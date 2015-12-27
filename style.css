@@ -1,3 +1,10 @@
+a.button.heroButton {
+    background-color: rgba(12, 228, 0, 0);
+    border: 1px solid;
+    width: 150px;
+}
+
+
 .herotext{
   color:white;
 }
@@ -16,7 +23,7 @@
   background: -webkit-linear-gradient(right, #00d2ff, #3a7bd5);
   background: -o-linear-gradient(right, #00d2ff, #3a7bd5);
   background: linear-gradient(to left, #00d2ff, #3a7bd5); /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+
   margin: 0 auto;
 }
 .top-bar{
@@ -83,4 +90,7 @@
       padding: 1.3rem;
       color: #fff; }
     .card .image img {
-      border-radius: 2px 2px 0 0; }
+      border-radius: 2px 2px 0 0;
+    }
+
+    

@@ -13,7 +13,7 @@
       <!-- Right Nav Section -->
       <ul class="center">
         <li><a ui-sref="landing">Home</a></li>
-        <li><a ui-sref="about">About</a></li>
+        <li><a ng-click="gotoAnchor('aboutLanding')">About</a></li>
         <li><a ui-sref="recentwork">Recent Work</a></li>
         <li><a ui-sref="contact">Contact Me</a></li>
         <li><a href="http://robertsonsamuel.github.io/blog/public/">Blog</a></li>
@@ -30,17 +30,38 @@
     <div class=" center-hero medium-12 large-12 columns text-center">
       <h1 class="herotext">Sam Robertson</h1>
       <h3 class="herotext">A graduate of PennState University and a </h3> <h3 class="herotext"><typer words="['Mechanical Engineer', 'Full Stack Developer', 'Team Player']" type-time='50' backspace-time='20' start-delay='5'> </h3>
+      <a ng-click="gotoAnchor('aboutLanding')" class="button heroButton"> About Me </a>
     </div>
   </div>
 </div> <!-- hero image div -->
 
 <div id="aboutLanding">
-<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias laboriosam magni vitae odit ea tempore. Quas iste quibusdam nihil, repudiandae quam, debitis cum modi id voluptate dolores officiis suscipit nemo distinctio sint, corporis!</h2>
+  <br>
+  <div class="row">
+  <div class="large-12 columns end">
+    <div class="card">
+      <div class="content">
+        <span class="title">A little about me</span>
+        <p>Welcome and thanks for checking out my personal site! I'm a full stack developer in the San Francisco Bay Area. I live and breathe JavaScript. I use it to develop large or small web and mobile applications. My focus is mostly on using the MEAN stack, but I'm not critical and pledge to find the best tool for a job. I have worked as a mechanical engineer in the automotive industry and while that was fun, I love to program. I like solving problems that can be automated with software, robots or computers in general. I have worked solo and on teams of 3-5 people in Scrum environments and love the challenge it takes to get something off the ground.
+      When I'm not coding I'm brushing up on my Japanese, flying/building an R/C airplane, working on a personal project or traveling. My upbringing was from a small town in Pennsylvania and I'm here now trying to make a difference. I also love to hike, run, snowboard and bike so getting active keeps me happy. I am available for hire. Contact me here. You can also read more about me and my activities on my blog.</p>
+      </div>
+      <div class="action">
+        <a href='#'>Contact</a>
+        <a href='#'>Blog</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+<!-- Timeline -->
+<div class="row">
+  
 </div>
 
 
 
+
 </div> <!-- ui view -->
-
-
-

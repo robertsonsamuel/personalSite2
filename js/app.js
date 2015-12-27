@@ -1,10 +1,12 @@
 'use strict';
 
-var app = angular.module('myApp',['ui.router', 'mm.foundation','typer','ngAnimate','anim-in-out']);
+let app = angular.module('myApp',['ui.router', 'mm.foundation','typer']);
 
+// Scroll Animations
+app.value('duScrollDuration', 2000).value('duScrollOffset', 30)
 
 app.config(function ($stateProvider, $urlRouterProvider) {
-   $urlRouterProvider.otherwise("/"); 
+   $urlRouterProvider.otherwise("/");
 
    $stateProvider
    .state('landing',{
@@ -29,15 +31,17 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 app.controller('MainCtrl', function($scope,$location, $anchorScroll){
 
+  // Navigation Control
+  $scope.gotoAnchor = function(anchor,$event) {
+    console.log($event);
+      $location.hash(anchor);
+      $anchorScroll();
+  };
+
+
 });
 
 app.controller('TopBar', function ($scope, $location, $anchorScroll) {
-  $scope.gotoAnchor = function(anchor) {
-   console.log(anchor);
-      // set the location.hash to the id of
-      // the element you wish to scroll to.
-      $location.hash('aboutLanding');
-    
-};
+
 
 });
