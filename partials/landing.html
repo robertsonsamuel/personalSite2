@@ -1,37 +1,20 @@
 <div ui-view >
 <div class="medium-12 heroimage">
-  <div ng-controller="TopBar">
-  <top-bar>
-    <ul class="title-area">
-      <li class="name">
-          <h1><a ui-sref="landing"></a><h1>
-      </li>
-      <li toggle-top-bar class="menu-icon"><a href="#"><span></span></a></li>
-    </ul>
 
-    <top-bar-section>
-      <!-- Right Nav Section -->
-      <ul class="center">
-        <li><a ui-sref="landing">Home</a></li>
-        <li><a ng-click="gotoAnchor('aboutLanding')">About</a></li>
-        <li><a ui-sref="recentwork">Recent Work</a></li>
-        <li><a ui-sref="contact">Contact Me</a></li>
-        <li><a href="http://robertsonsamuel.github.io/blog/public/">Blog</a></li>
-      </ul>
-
-      <!-- Left Nav Section -->
-      <!-- <ul class="left">
-        <li><a href="#">Left</a></li>
-      </ul> -->
-    </top-bar-section>
-  </top-bar>
-</div>
     <div class="row">
     <div class=" center-hero medium-12 large-12 columns text-center">
       <h1 class="herotext">Sam Robertson</h1>
       <h3 class="herotext">A graduate of PennState University and a </h3> <h3 class="herotext"><typer words="['Mechanical Engineer', 'Full Stack Developer', 'Team Player']" type-time='50' backspace-time='20' start-delay='5'> </h3>
       <a ng-click="gotoAnchor('aboutLanding')" class="button heroButton"> About Me </a>
     </div>
+    <div class="socialLinks">
+      <ul class="socialLinksUl">
+        <li class="socialLink"><a href="#">GitHub</a></li>
+        <li class="socialLink"><a href="#">LinkedIn</a></li>
+        <li class="socialLink"><a href="#">Twitter</a></li>
+        <li class="socialLink"><a href="#">Facebook</a></li>
+      </ul>
+      </div>
   </div>
 </div> <!-- hero image div -->
 
@@ -43,7 +26,8 @@
       <div class="content">
         <span class="title">A little about me</span>
         <p>Welcome and thanks for checking out my personal site! I'm a full stack developer in the San Francisco Bay Area. I live and breathe JavaScript. I use it to develop large or small web and mobile applications. My focus is mostly on using the MEAN stack, but I'm not critical and pledge to find the best tool for a job. I have worked as a mechanical engineer in the automotive industry and while that was fun, I love to program. I like solving problems that can be automated with software, robots or computers in general. I have worked solo and on teams of 3-5 people in Scrum environments and love the challenge it takes to get something off the ground.
-      When I'm not coding I'm brushing up on my Japanese, flying/building an R/C airplane, working on a personal project or traveling. My upbringing was from a small town in Pennsylvania and I'm here now trying to make a difference. I also love to hike, run, snowboard and bike so getting active keeps me happy. I am available for hire. Contact me here. You can also read more about me and my activities on my blog.</p>
+      When I'm not coding I'm brushing up on my Japanese, flying/building an R/C airplane, working on a personal project or traveling. My upbringing was from a small town in Pennsylvania and I'm here now trying to make a difference. I also love to hike, run, snowboard and bike so getting active keeps me happy. I am available for hire. Contact me here. You can also read more about me and my activities on my blog.
+    </p>
       </div>
       <div class="action">
         <a href='#'>Contact</a>
@@ -53,13 +37,46 @@
   </div>
 </div>
 <br>
-
+</div>
 
 
 <!-- Timeline -->
 <div class="row">
-  
+  <div class="large-12 columns end">
+    <timeline>
+        <timeline-event ng-repeat="event in events">
+          <timeline-badge class="{{event.badgeClass}} timeline-hidden"
+                          when-visible="animateElementIn" when-not-visible="animateElementOut">
+            <i class="glyphicon {{event.badgeIconClass}}"></i>
+          </timeline-badge>
+
+          <timeline-panel class="{{event.badgeClass}} timeline-hidden"
+                          when-visible="animateElementIn" when-not-visible="animateElementOut">
+            <timeline-heading>
+              <h4>{{event.title}}</h4>
+
+              <p ng-if="event.when">
+                <span><i class="fa fa-clock-o"></i>{{event.when}}</span>
+              </p>
+              <p ng-if="event.titleContentHtml" ng-bind-html="event.titleContentHtml">
+              </p>
+              <p ng-if="event.content">
+                {{event.content}}
+              </p>
+            </timeline-heading>
+            <div ng-if="event.contentHtml" ng-bind-html="event.contentHtml">
+              things here
+            </div>
+            <timeline-footer ng-if="event.footerContentHtml">
+              <span ng-bind-html="event.footerContentHtml"></span>
+            </timeline-footer>
+          </timeline-panel>
+        </timeline-event>
+      </timeline>
+  </div>
 </div>
+
+
 
 
 
