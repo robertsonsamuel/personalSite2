@@ -1,57 +1,62 @@
-<div ui-view >
-<div class="medium-12 heroimage">
+<div ui-view>
+  <div class="medium-12 heroimage">
 
     <div class="row">
-    <div class=" center-hero medium-12 large-12 columns text-center">
-      <h1 class="herotext">Sam Robertson</h1>
-      <h3 class="herotext">A graduate of PennState University and a </h3> <h3 class="herotext"><typer words="['Mechanical Engineer', 'Full Stack Developer', 'Team Player']" type-time='50' backspace-time='20' start-delay='5'> </h3>
-      <a ng-click="gotoAnchor('aboutLanding')" class="button heroButton"> About Me </a>
-    </div>
-    <div class="socialLinks">
-      <ul class="socialLinksUl">
-        <li class="socialLink"><a href="#">GitHub</a></li>
-        <li class="socialLink"><a href="#">LinkedIn</a></li>
-        <li class="socialLink"><a href="#">Twitter</a></li>
-        <li class="socialLink"><a href="#">Facebook</a></li>
-      </ul>
+      <div class=" center-hero medium-12 large-12 columns text-center">
+        <h1 class="herotext">Sam Robertson</h1>
+        <h3 class="herotext">A graduate of PennState University and a </h3>
+        <h3 class="herotext">
+          <typer words="['Mechanical Engineer', 'Full Stack Developer', 'Team Player']" type-time='50' backspace-time='20' start-delay='5'>
+        </h3>
+        <a ng-click="gotoAnchor('aboutLanding')" class="button heroButton"> About Me </a>
       </div>
+      <div class="socialLinks">
+        <ul class="socialLinksUl">
+          <li class="socialLink"><a href="#">GitHub</a></li>
+          <li class="socialLink"><a href="#">LinkedIn</a></li>
+          <li class="socialLink"><a href="#">Twitter</a></li>
+          <li class="socialLink"><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-</div> <!-- hero image div -->
+  <!-- hero image div -->
 
-<div id="aboutLanding">
-  <br>
+  <div id="aboutLanding">
+    <br>
+    <div class="row">
+      <div class="large-12 columns end">
+        <div class="card">
+          <div class="content">
+            <span class="title">A little about me</span>
+            <p>Welcome and thanks for checking out my personal site! I'm a full stack developer in the San Francisco Bay Area. I live and breathe JavaScript. I use it to develop large or small web and mobile applications. My focus is mostly on using the
+              MEAN stack, but I'm not critical and pledge to find the best tool for a job. I have worked as a mechanical engineer in the automotive industry and while that was fun, I love to program. I like solving problems that can be automated with
+              software, robots or computers in general. I have worked solo and on teams of 3-5 people in Scrum environments and love the challenge it takes to get something off the ground. When I'm not coding I'm brushing up on my Japanese, flying/building
+              an R/C airplane, working on a personal project or traveling. My upbringing was from a small town in Pennsylvania and I'm here now trying to make a difference. I also love to hike, run, snowboard and bike so getting active keeps me happy.
+              I am available for hire. Contact me here. You can also read more about me and my activities on my blog.
+            </p>
+          </div>
+          <div class="action">
+            <a href='#'>Contact</a>
+            <a href='#'>Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+
+
+  <!-- Timeline -->
   <div class="row">
-  <div class="large-12 columns end">
-    <div class="card">
-      <div class="content">
-        <span class="title">A little about me</span>
-        <p>Welcome and thanks for checking out my personal site! I'm a full stack developer in the San Francisco Bay Area. I live and breathe JavaScript. I use it to develop large or small web and mobile applications. My focus is mostly on using the MEAN stack, but I'm not critical and pledge to find the best tool for a job. I have worked as a mechanical engineer in the automotive industry and while that was fun, I love to program. I like solving problems that can be automated with software, robots or computers in general. I have worked solo and on teams of 3-5 people in Scrum environments and love the challenge it takes to get something off the ground.
-      When I'm not coding I'm brushing up on my Japanese, flying/building an R/C airplane, working on a personal project or traveling. My upbringing was from a small town in Pennsylvania and I'm here now trying to make a difference. I also love to hike, run, snowboard and bike so getting active keeps me happy. I am available for hire. Contact me here. You can also read more about me and my activities on my blog.
-    </p>
-      </div>
-      <div class="action">
-        <a href='#'>Contact</a>
-        <a href='#'>Blog</a>
-      </div>
-    </div>
-  </div>
-</div>
-<br>
-</div>
-
-
-<!-- Timeline -->
-<div class="row">
-  <div class="large-12 columns end">
-    <timeline>
+    <div class="large-12 columns end">
+      <timeline>
         <timeline-event ng-repeat="event in events">
-          <timeline-badge class="{{event.badgeClass}} timeline-hidden"
-                          when-visible="animateElementIn" when-not-visible="animateElementOut">
+          <timeline-badge class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
             <i class="glyphicon {{event.badgeIconClass}}"></i>
           </timeline-badge>
 
-          <timeline-panel class="{{event.badgeClass}} timeline-hidden"
-                          when-visible="animateElementIn" when-not-visible="animateElementOut">
+          <timeline-panel class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
             <timeline-heading>
               <h4>{{event.title}}</h4>
 
@@ -73,12 +78,81 @@
           </timeline-panel>
         </timeline-event>
       </timeline>
+    </div>
   </div>
+
+
+
+  <!-- Web Projects -->
+  <hr>
+  <div class="text-center">
+    <h1>Some Past Projects</h1>
+  </div>
+  <div class="row">
+
+    <ul class="small-block-grid-1 large-block-grid-4">
+      <li>
+        <div class="card">
+          <div class="image">
+            <img src="http://static.pexels.com/wp-content/uploads/2014/07/alone-clouds-hills-1909-527x350.jpg">
+            <span class="title">Road Warrior</span>
+          </div>
+          <div class="content">
+            <span class="title">A little about me</span>
+          </div>
+          <div class="action">
+            <a href='#'>Contact</a>
+            <a href='#'>Blog</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="card">
+          <div class="image">
+            <img src="http://static.pexels.com/wp-content/uploads/2014/07/alone-clouds-hills-1909-527x350.jpg">
+            <span class="title">Road Warrior</span>
+          </div>
+          <div class="content">
+            <span class="title">A little about me</span>
+          </div>
+          <div class="action">
+            <a href='#'>Contact</a>
+            <a href='#'>Blog</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="card">
+          <div class="image">
+            <img src="http://static.pexels.com/wp-content/uploads/2014/07/alone-clouds-hills-1909-527x350.jpg">
+            <span class="title">Road Warrior</span>
+          </div>
+          <div class="content">
+            <span class="title">A little about me</span>
+          </div>
+          <div class="action">
+            <a href='#'>Contact</a>
+            <a href='#'>Blog</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="card">
+          <div class="image">
+            <img src="http://static.pexels.com/wp-content/uploads/2014/07/alone-clouds-hills-1909-527x350.jpg">
+            <span class="title">Road Warrior</span>
+          </div>
+          <div class="content">
+            <span class="title">A little about me</span>
+          </div>
+          <div class="action">
+            <a href='#'>Contact</a>
+            <a href='#'>Blog</a>
+          </div>
+        </div>
+      </li>
+
+
+
 </div>
-
-
-
-
-
-
-</div> <!-- ui view -->
+<!-- ui view -->

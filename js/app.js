@@ -57,16 +57,19 @@ app.controller('MainCtrl', function($scope, $document, $timeout,$location, $anch
   },
   {
     badgeClass: 'info',
-    title: 'Second heading',
-    when:'somtime',
-    content: 'More awesome content.'
+    title: 'Delphi Automotive PLC',
+    when:' May - August 2014',
+    content:'A summer internship with the company in Lockport NY.',
+    contentHtml: `<p>Please see my <a href="#">Resume for more details.</p>`
   },
   {
     badgeClass: 'info',
-    title: 'Second heading',
-    when:'somtime',
-    content: 'More awesome content.'
+    title: 'IES Study Abroad',
+    when:' May - July 2013',
+    content: 'Spent the summer learning the Japanese language and culture.',
+    contentHtml:'The program is found at: <a href="http://www.iesabroad.org/study-abroad/programs/tokyo-summer">IES Tokyo Summer</a>'
   }
+
 ];
 
 $scope.animateElementIn = function($el) {
