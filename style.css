@@ -84,6 +84,11 @@ a.button.heroButton {
     position: absolute;
     left: 0%;
 }
+
+li.socialLink a:hover {
+    color: #F9FF00;
+}
+
 .socialLinksUl {
     margin:0;
     padding: 0;
