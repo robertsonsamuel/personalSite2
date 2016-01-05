@@ -1,6 +1,6 @@
 'use strict';
 
-let app = angular.module('myApp',['ui.router', 'mm.foundation','typer','angular-timeline','ngSanitize']);
+var app = angular.module('myApp',['ui.router', 'mm.foundation','typer','angular-timeline','ngSanitize']);
 
 // Scroll Animations
 app.value('duScrollDuration', 2000).value('duScrollOffset', 30)
