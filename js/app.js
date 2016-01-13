@@ -5,7 +5,12 @@ var app = angular.module('myApp',['ui.router', 'mm.foundation','typer','angular-
 // Scroll Animations
 app.value('duScrollDuration', 2000).value('duScrollOffset', 30)
 
-app.config(function ($stateProvider, $urlRouterProvider) {
+app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
+  $locationProvider.html5Mode({
+		enabled:false,
+		requireBase: false
+	});
+
    $urlRouterProvider.otherwise("/");
 
    $stateProvider
@@ -60,7 +65,7 @@ app.controller('MainCtrl', function($scope, $document, $timeout,$location, $anch
     title: 'Delphi Automotive PLC',
     when:' May - August 2014',
     content:'A summer internship with the company in Lockport NY.',
-    contentHtml: `<p>Please see my <a href="#">Resume for more details.</p>`
+    contentHtml: `<p>Please see my resume for more details.</p>`
   },
   {
     badgeClass: 'info',

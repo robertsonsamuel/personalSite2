@@ -21,6 +21,17 @@
 
   <div ng-controller="MainCtrl">
 
+    <div class="socialLinks">
+      <hr class="socialLinksHR">
+      <ul class="socialLinksUl">
+        <li class="socialLink"><a href="https://github.com/robertsonsamuel">GitHub</a></li>
+        <li class="socialLink"><a href="https://www.linkedin.com/in/robertsonsamuel93">LinkedIn</a></li>
+        <li class="socialLink"><a href="https://twitter.com/SamuelRobertso6">Twitter</a></li>
+        <li class="socialLink"><a href="/resume/Robertson_Samuel_Resume_2016_General.pdf">Resume</a></li>
+        <li class="socialLink"><a href="http://robertsonsamuel.github.io/blog/public/">Blog</a></li>
+      </ul>
+    </div>
+
     <div class="medium-12 heroimage">
 
       <div class="row">
@@ -33,16 +44,7 @@
           <a ng-click="gotoAnchor('aboutLanding')" class="button heroButton"> About Me </a>
         </div>
 
-        <div class="socialLinks">
-          <hr class="socialLinksHR">
-          <ul class="socialLinksUl">
-            <li class="socialLink"><a href="https://github.com/robertsonsamuel">GitHub</a></li>
-            <li class="socialLink"><a href="https://www.linkedin.com/in/robertsonsamuel93">LinkedIn</a></li>
-            <li class="socialLink"><a href="https://twitter.com/SamuelRobertso6">Twitter</a></li>
-            <li class="socialLink"><a href="resume/Robertson_Samuel_Resume_2015.pdf">Resume</a></li>
-            <li class="socialLink"><a href="http://robertsonsamuel.github.io/blog/public/">Blog</a></li>
-          </ul>
-        </div>
+
       </div>
     </div>
     <!-- hero image div -->
@@ -58,12 +60,14 @@
                 MEAN stack, but I'm not critical and pledge to find the best tool for a job. I have worked as a mechanical engineer in the automotive industry and while that was fun, I love to program. I like solving problems that can be automated with
                 software, robots or computers in general. I have worked solo and on teams of 3-5 people in Scrum environments and love the challenge it takes to get something off the ground.
               </p>
-              <br>
+              <hr>
               <p>When I'm not coding I'm brushing up on my Japanese, flying/building
               an R/C airplane, working on a personal project or traveling. My upbringing was from a small town in Pennsylvania and I'm here now trying to make a difference. I also love to hike, run, snowboard and bike so getting active keeps me happy.
-              I am available for hire. Contact me here. You can also read more about me and my activities on my blog.</p>
+              I am available for hire. You can also read more about me and my activities on my blog.</p>
             </div>
-
+            <div class="card action">
+               <a ng-click="gotoAnchor('contactForm')"> Contact me </a>
+            </div>
           </div>
         </div>
       </div>
@@ -203,7 +207,7 @@
 </div> <!-- MainCtrl end -->
 
 
-<div class="contactform">
+<div id="contactForm" class="contactform">
 <script type="text/javascript" src="https://form.jotform.com/jsform/60038801285149"></script>
 </div>
 <hr>
@@ -211,5 +215,6 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/angular-timeline/dist/angular-timeline.js"></script>
 <script src="js/app.js"></script>
+
 </body>
 </html>
