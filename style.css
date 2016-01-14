@@ -6,12 +6,19 @@ body {
 .hidden {
   visibility: hidden;
 }
+.card-hidden{
+    visibility: hidden;
+}
 
 a.button.heroButton {
     background-color: rgba(12, 228, 0, 0);
     border: 1px solid;
     width: 150px;
 }
+a.button.heroButton:hover{
+    color: #E4CA37;
+}
+
 
 
 .herotext{
@@ -45,7 +52,7 @@ a.button.heroButton {
 }
 
 li.socialLink a:hover {
-    color: #F9FF00;
+    color: #E4CA37;
 }
 
 .socialLinksUl {

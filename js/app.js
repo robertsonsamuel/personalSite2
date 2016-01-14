@@ -77,7 +77,7 @@ app.controller('MainCtrl', function($scope, $document, $timeout,$location, $anch
 
 ];
 
-$scope.animateElementIn = function($el) {
+    $scope.animateElementIn = function($el) {
 		$el.removeClass('timeline-hidden');
 		$el.addClass('bounce-in');
 	};
@@ -86,7 +86,25 @@ $scope.animateElementIn = function($el) {
 	$scope.animateElementOut = function($el) {
 		$el.addClass('timeline-hidden');
 		$el.removeClass('bounce-in');
+    };
+    
+    $scope.animateCardInLeft = function($el) {
+		$el.removeClass('card-hidden');
+		$el.addClass('animated slideInLeft');
 	};
+    $scope.animateCardInRight = function($el) {
+		$el.removeClass('card-hidden');
+		$el.addClass('animated slideInRight');
+	};
+    
+    $scope.animateCardOutLeft = function($el) {
+		$el.addClass('card-hidden');
+		$el.removeClass('animated slideInLeft');
+    };
+     $scope.animateCardOutRight = function($el) {
+		$el.addClass('card-hidden');
+		$el.removeClass('animated slideInRight');
+    };
 
 	$scope.leftAlign = function() {
 		$scope.side = 'left';
