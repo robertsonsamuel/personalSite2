@@ -109,7 +109,4 @@ app.controller('MainCtrl', function($scope, $document, $timeout,$location, $anch
 	$scope.defaultAlign = function() {
 		$scope.side = ''; // or 'alternate'
 	}
-
-
-
 });
