@@ -90,21 +90,13 @@ app.controller('MainCtrl', function($scope, $document, $timeout,$location, $anch
     
     $scope.animateCardInLeft = function($el) {
 		$el.removeClass('card-hidden');
-		$el.addClass('animated slideInLeft');
+		$el.addClass('animated fadeInUp');
 	};
     $scope.animateCardInRight = function($el) {
 		$el.removeClass('card-hidden');
-		$el.addClass('animated slideInRight');
+		$el.addClass('animated fadeInUp');
 	};
     
-    $scope.animateCardOutLeft = function($el) {
-		$el.addClass('card-hidden');
-		$el.removeClass('animated slideInLeft');
-    };
-     $scope.animateCardOutRight = function($el) {
-		$el.addClass('card-hidden');
-		$el.removeClass('animated slideInRight');
-    };
 
 	$scope.leftAlign = function() {
 		$scope.side = 'left';

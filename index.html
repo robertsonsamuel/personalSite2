@@ -95,11 +95,11 @@
           </div>
           <timeline>
             <timeline-event ng-repeat="event in events">
-              <timeline-badge class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+              <timeline-badge class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn">
                 <i class="glyphicon {{event.badgeIconClass}}"></i>
               </timeline-badge>
 
-              <timeline-panel class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+              <timeline-panel class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn">
                 <timeline-heading>
                   <h4>{{event.title}}</h4>
 
@@ -139,7 +139,7 @@
             <ul class="small-block-grid-1 large-block-grid-2">
               <li>
 
-                <div class="card medium" when-visible="animateCardInLeft" when-not-visible="animateCardOutLeft">
+                <div class="card medium card-hidden" when-visible="animateCardInLeft" >
                   <div class="card-image">
                     <img src="images/phaser-game.png">
                     <span class="card-title">Run!</span>
@@ -155,7 +155,7 @@
                 </div>
               </li>
               <li>
-                <div class="card medium" when-visible="animateCardInRight" when-not-visible="animateCardOutRight">
+                <div class="card medium card-hidden" when-visible="animateCardInRight">
                   <div class="card-image">
                     <img src="images/pokeAFolk.jpg">
                     <span class="card-title">Poke Some Folks</span>
@@ -171,7 +171,7 @@
                 </div>
               </li>
               <li>
-                <div class="card medium" when-visible="animateCardInLeft" when-not-visible="animateCardOutLeft">
+                <div class="card medium card-hidden" when-visible="animateCardInLeft" >
                   <div class="card-image">
                     <img src="images/meteor-tracker.png">
                     <span class="card-title">Meteor Tracker</span>
@@ -187,7 +187,7 @@
                 </div>
               </li>
               <li>
-                <div class="card medium" when-visible="animateCardInRight" when-not-visible="animateCardOutRight">
+                <div class="card medium card-hidden" when-visible="animateCardInRight" >
                   <div class="card-image">
                     <img src="images/weather-app.png">
                     <span class="card-title">Local Weather</span>
@@ -203,7 +203,7 @@
                 </div>
               </li>
               <li>
-                <div class="card medium" when-visible="animateCardInLeft" when-not-visible="animateCardOutLeft">
+                <div class="card medium card-hidden" when-visible="animateCardInLeft" >
                   <div class="card-image">
                     <img src="images/towers.png">
                     <span class="card-title">Towers of Hanoi</span>
