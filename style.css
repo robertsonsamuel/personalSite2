@@ -40,7 +40,7 @@ a.button.heroButton {
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 
 
-.card {
+/*.card {
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -77,7 +77,7 @@ a.button.heroButton {
       color: #fff; }
     .card .image img {
       border-radius: 2px 2px 0 0;
-    }
+    }*/
 
 
 .socialLinks {

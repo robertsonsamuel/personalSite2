@@ -7,7 +7,7 @@ app.value('duScrollDuration', 2000).value('duScrollOffset', 30)
 
 app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
   $locationProvider.html5Mode({
-		enabled:false,
+		enabled:true,
 		requireBase: false
 	});
 

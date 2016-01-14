@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,10 +15,13 @@
   <link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css">
   <link rel="stylesheet" href="bower_components/angular-timeline/dist/angular-timeline.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Samuel Robertson</title>
 </head>
+
 <body ng-app="myApp">
+  <base href="/" target="_blank" />
 
   <div ng-controller="MainCtrl">
 
@@ -27,7 +31,7 @@
         <li class="socialLink"><a href="https://github.com/robertsonsamuel">GitHub</a></li>
         <li class="socialLink"><a href="https://www.linkedin.com/in/robertsonsamuel93">LinkedIn</a></li>
         <li class="socialLink"><a href="https://twitter.com/SamuelRobertso6">Twitter</a></li>
-        <li class="socialLink"><a href="/resume/Robertson_Samuel_Resume_2016_General.pdf">Resume</a></li>
+        <li class="socialLink"><a href="resume/Robertson_Samuel_Resume_2016_General.pdf" target="_blank">Resume</a></li>
         <li class="socialLink"><a href="http://robertsonsamuel.github.io/blog/public/">Blog</a></li>
       </ul>
     </div>
@@ -48,190 +52,192 @@
       </div>
     </div>
     <!-- hero image div -->
-  <div id="landing">
-    <div id="aboutLanding">
-      <br>
-      <div class="row">
-        <div class="large-12 columns end">
-          <div class="card">
-            <div class="content">
-              <span class="title">A little about me</span>
-              <p>Welcome and thanks for checking out my personal site! I'm a full stack developer in the San Francisco Bay Area. I live and breathe JavaScript. I use it to develop large or small web and mobile applications. My focus is mostly on using the
-                MEAN stack, but I'm not critical and pledge to find the best tool for a job. I have worked as a mechanical engineer in the automotive industry and while that was fun, I love to program. I like solving problems that can be automated with
-                software, robots or computers in general. I have worked solo and on teams of 3-5 people in Scrum environments and love the challenge it takes to get something off the ground.
-              </p>
-              <hr>
-              <p>When I'm not coding I'm brushing up on my Japanese, flying/building
-              an R/C airplane, working on a personal project or traveling. My upbringing was from a small town in Pennsylvania and I'm here now trying to make a difference. I also love to hike, run, snowboard and bike so getting active keeps me happy.
-              I am available for hire. You can also read more about me and my activities on my blog.</p>
-            </div>
-            <div class="card action">
-               <a ng-click="gotoAnchor('contactForm')"> Contact me </a>
+    <div id="landing">
+      <div id="aboutLanding">
+        <br>
+        <div class="row">
+          <div class="large-12 columns end">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">A little about me</span>
+                <p>Welcome and thanks for checking out my personal site! I'm a full stack developer in the San Francisco Bay Area. I live and breathe JavaScript. I use it to develop large or small web and mobile applications. My focus is mostly on using
+                  the MEAN stack, but I'm not critical and pledge to find the best tool for a job. I have worked as a mechanical engineer in the automotive industry and while that was fun, I love to program. I like solving problems that can be automated
+                  with software, robots or computers in general. I have worked solo and on teams of 3-5 people in Scrum environments and love the challenge it takes to get something off the ground.
+                </p>
+                <hr>
+                <p>When I'm not coding I'm brushing up on my Japanese, flying/building an R/C airplane, working on a personal project or traveling. My upbringing was from a small town in Pennsylvania and I'm here now trying to make a difference. I also love
+                  to hike, run, snowboard and bike so getting active keeps me happy. I am available for hire. You can also read more about me and my activities on my blog.</p>
+              </div>
+              <div class="card-action">
+                <a ng-click="gotoAnchor('contactForm')"> Contact me </a>
+              </div>
             </div>
           </div>
         </div>
+        <br>
       </div>
-      <br>
-    </div>
 
 
-    <!-- Timeline -->
-    <div class="row">
-      <div class="large-12 columns end">
-        <div class="text-center">
-          <h1>What I have been up to..</h1>
+      <!-- Timeline -->
+      <div class="row">
+        <div class="large-12 columns end">
+          <div class="text-center">
+            <h1>What I have been up to..</h1>
+          </div>
+          <timeline>
+            <timeline-event ng-repeat="event in events">
+              <timeline-badge class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+                <i class="glyphicon {{event.badgeIconClass}}"></i>
+              </timeline-badge>
+
+              <timeline-panel class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+                <timeline-heading>
+                  <h4>{{event.title}}</h4>
+
+                  <p ng-if="event.when">
+                    <span><i class="fa fa-clock-o"></i>{{event.when}}</span>
+                  </p>
+                  <p ng-if="event.titleContentHtml" ng-bind-html="event.titleContentHtml">
+                  </p>
+                  <p ng-if="event.content">
+                    {{event.content}}
+                  </p>
+                </timeline-heading>
+                <div ng-if="event.contentHtml" ng-bind-html="event.contentHtml">
+                  things here
+                </div>
+                <timeline-footer ng-if="event.footerContentHtml">
+                  <span ng-bind-html="event.footerContentHtml"></span>
+                </timeline-footer>
+              </timeline-panel>
+            </timeline-event>
+          </timeline>
         </div>
-        <timeline>
-          <timeline-event ng-repeat="event in events">
-            <timeline-badge class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
-              <i class="glyphicon {{event.badgeIconClass}}"></i>
-            </timeline-badge>
-
-            <timeline-panel class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
-              <timeline-heading>
-                <h4>{{event.title}}</h4>
-
-                <p ng-if="event.when">
-                  <span><i class="fa fa-clock-o"></i>{{event.when}}</span>
-                </p>
-                <p ng-if="event.titleContentHtml" ng-bind-html="event.titleContentHtml">
-                </p>
-                <p ng-if="event.content">
-                  {{event.content}}
-                </p>
-              </timeline-heading>
-              <div ng-if="event.contentHtml" ng-bind-html="event.contentHtml">
-                things here
-              </div>
-              <timeline-footer ng-if="event.footerContentHtml">
-                <span ng-bind-html="event.footerContentHtml"></span>
-              </timeline-footer>
-            </timeline-panel>
-          </timeline-event>
-        </timeline>
       </div>
-    </div>
 
 
 
-    <!-- Web Projects -->
+      <!-- Web Projects -->
       <div id="recentwork">
-    <hr>
-    <div class="text-center">
-      <h1>Some Past Projects</h1>
-      <hr>
-    </div>
-    <div class="row">
-      <div class="large-12 columns">
+        <hr>
+        <div class="text-center">
+          <h1>Some Past Projects </h1>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
 
             <ul class="small-block-grid-1 large-block-grid-2">
               <li>
-                <div class="card">
-                  <div class="image">
-                    <img class="card-image-head" src="images/phaser-game.png">
-                  </div>
-                  <div class="content">
-                    <span class="title">Phaser Run!</span>
-                    <p>A multiplayer Phaser.io game built with express and Socket.IO </p>
-                    <p>Race your friends to collect the star and diamond!</p>
 
+                <div class="card medium">
+                  <div class="card-image">
+                    <img src="images/phaser-game.png">
+                    <span class="card-title">Run!</span>
                   </div>
-                  <div class="action">
+                  <div class="card-content">
+                    <p> Phasor Run! A multiplayer Phaser.io game built with Express & Socket.IO </p>
+                    <p>Race your friends to collect the star and diamond!</p>
+                  </div>
+                  <div class="card-action">
                     <a href='https://calm-hamlet-2538.herokuapp.com/'>Visit</a>
                     <a href='https://github.com/robertsonsamuel/afungame'>Source Code</a>
                   </div>
                 </div>
               </li>
               <li>
-                <div class="card">
-                  <div class="image">
-                    <img class="card-image-head" src="images/pokeAFolk.jpg">
+                <div class="card medium">
+                  <div class="card-image">
+                    <img src="images/pokeAFolk.jpg">
+                    <span class="card-title">Poke Some Folks</span>
                   </div>
-                  <div class="content">
-                    <span class="title">Poke Some Folks </span>
+                  <div class="card-content">
                     <p>A simple MEAN stack app allowing users to poke eachother </p>
                     <p>Poke other users and maybe meet them in real life!</p>
                   </div>
-                  <div class="action">
+                  <div class="card-action">
                     <a href='https://dry-mesa-2798.herokuapp.com/'>Visit</a>
                     <a href='https://github.com/robertsonsamuel/sog'>Source Code</a>
                   </div>
                 </div>
               </li>
               <li>
-                <div class="card">
-                  <div class="image">
-                    <img class="card-image-head" src="images/meteor-tracker.png">
+                <div class="card medium">
+                  <div class="card-image">
+                    <img src="images/meteor-tracker.png">
+                    <span class="card-title">Meteor Tracker</span>
                   </div>
-                  <div class="content">
-                    <span class="title">Meteor Tracker</span>
+                  <div class="card-content">
                     <p>A Google Maps application that uses the NASA REST API to gather information on meteor impact and locations. </p>
                     <p>Click on the meteor to learn more information about it! </p>
                   </div>
-                  <div class="action">
+                  <div class="card-action">
                     <a href='https://tranquil-sea-6514.herokuapp.com/'>Visit</a>
                     <a href='https://github.com/robertsonsamuel/meteor-live'>Source Code</a>
                   </div>
                 </div>
               </li>
               <li>
-                <div class="card">
-                  <div class="image">
-                    <img class="card-image-head" src="images/weather-app.png">
+                <div class="card medium">
+                  <div class="card-image">
+                    <img src="images/weather-app.png">
+                    <span class="card-title">Local Weather</span>
                   </div>
-                  <div class="content">
-                  <span class="title">Local Weather</span>
-                    <p>A simple weather application that uses the Weather Underground API to track a user’s IP location and display the current weather and also the five day forecast.</p>
-                    <p>Users can also enter a zip code to view other forecasts.</p>
+                  <div class="card-content">
+                      <p>A simple weather application that uses the Weather Underground API to track a user’s IP
+                      location and display the current weather and also the five day forecast. Users can also enter a zip code to view other forecasts.</p>
                   </div>
-                  <div class="action">
+                  <div class="card-action">
                     <a href='http://robertsonsamuel.github.io/weatherApp/'>Visit</a>
                     <a href='https://github.com/robertsonsamuel/weatherApp'>Source Code</a>
                   </div>
                 </div>
               </li>
               <li>
-                <div class="card">
-                  <div class="image">
-                    <img class="card-image-head" src="images/towers.png">
+                <div class="card medium">
+                  <div class="card-image">
+                    <img src="images/towers.png">
+                    <span class="card-title">Towers of Hanoi</span>
                   </div>
-                  <div class="content">
-                    <span class="title">Towers of Hanoi</span>
-                    <p>The classic Towers of Hanoi, a simple version written using just HTML, some CSS and jQuery.</p>
+                  <div class="card-content">
+                    <p>The classic Towers of Hanoi, a simple version written in HTML, CSS and jQuery.</p>
+                    <p>Can you solve the puzzle?</p>
                   </div>
-                  <div class="action">
+                  <div class="card-action">
                     <a href='http://robertsonsamuel.github.io/hanoi'>Visit</a>
                     <a href='https://github.com/robertsonsamuel/hanoi'>Source Code</a>
                   </div>
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
       </div>
+
+      <div class="text-center">
+        <hr>
+        <h1>Like what you see?</h1>
+        <h3> Let's get in touch... </h3>
+      </div>
+
+
+
+
     </div>
-  </div>
-
-  <div class="text-center">
-    <hr>
-    <h1>Like what you see?</h1>
-    <h3> Let's get in touch... </h3>
-  </div>
-
-
-
 
   </div>
+  <!-- MainCtrl end -->
 
-</div> <!-- MainCtrl end -->
 
-
-<div id="contactForm" class="contactform">
-<script type="text/javascript" src="https://form.jotform.com/jsform/60038801285149"></script>
-</div>
-<hr>
-<br>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/angular-timeline/dist/angular-timeline.js"></script>
-<script src="js/app.js"></script>
+  <div id="contactForm" class="contactform">
+    <script type="text/javascript" src="https://form.jotform.com/jsform/60038801285149"></script>
+  </div>
+  <hr>
+  <br>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular-timeline/dist/angular-timeline.js"></script>
+  <script src="js/app.js"></script>
 
 </body>
+
 </html>
