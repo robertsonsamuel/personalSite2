@@ -9,13 +9,16 @@
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="bower_components/angular-foundation/mm-foundation-tpls.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-sanitize.js"></script>
+  <script src="bower_components/angular-scroll-animate/dist/angular-scroll-animate.js"></script>
+  <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
   <script src="bower_components/angular-typer/dist/typer.min.js"></script>
 
 
   <link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css">
   <link rel="stylesheet" href="bower_components/angular-timeline/dist/angular-timeline.css" />
+  <link rel="stylesheet" href="bower_components/angular-timeline/dist/angular-timeline-animations.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.css">
   <link rel="stylesheet" href="style.css">
   <title>Samuel Robertson</title>
 </head>
@@ -45,7 +48,7 @@
           <h3 class="herotext">
             <typer words="['Mechanical Engineer', 'Full Stack Developer', 'Team Player']" type-time='50' backspace-time='20' start-delay='5'>
           </h3>
-          <a ng-click="gotoAnchor('aboutLanding')" class="button heroButton"> About Me </a>
+          <a href="#aboutLanding" class="button heroButton" du-smooth-scroll> About Me </a>
         </div>
 
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('myApp',['ui.router', 'mm.foundation','typer','angular-timeline','ngSanitize']);
+var app = angular.module('myApp',['ui.router','duScroll', 'mm.foundation','typer','angular-timeline','ngSanitize','angular-scroll-animate']);
 
 // Scroll Animations
 app.value('duScrollDuration', 2000).value('duScrollOffset', 30)
@@ -100,11 +100,6 @@ $scope.animateElementIn = function($el) {
 		$scope.side = ''; // or 'alternate'
 	}
 
-
-
-});
-
-app.controller('TopBar', function ($scope, $location, $anchorScroll) {
 
 
 });
