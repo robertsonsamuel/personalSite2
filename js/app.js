@@ -78,13 +78,13 @@ app.controller('MainCtrl', function($scope, $document, $timeout,$location, $anch
 ];
 
     $scope.animateElementIn = function($el) {
-		$el.removeClass('timeline-hidden');
+		$el.removeClass('card-hidden');
 		$el.addClass('bounce-in');
 	};
 
 	// optional: not mandatory (uses angular-scroll-animate)
 	$scope.animateElementOut = function($el) {
-		$el.addClass('timeline-hidden');
+		$el.addClass('card-hidden');
 		$el.removeClass('bounce-in');
     };
     

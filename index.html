@@ -95,11 +95,11 @@
           </div>
           <timeline>
             <timeline-event ng-repeat="event in events">
-              <timeline-badge class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn">
+              <timeline-badge class="{{event.badgeClass}} card-hidden" when-visible="animateElementIn">
                 <i class="glyphicon {{event.badgeIconClass}}"></i>
               </timeline-badge>
 
-              <timeline-panel class="{{event.badgeClass}} timeline-hidden" when-visible="animateElementIn">
+              <timeline-panel class="{{event.badgeClass}} card-hidden" when-visible="animateElementIn">
                 <timeline-heading>
                   <h4>{{event.title}}</h4>
 
